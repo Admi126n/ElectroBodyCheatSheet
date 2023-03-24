@@ -14,14 +14,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var picker: UIPickerView!
     
     var timer = Timer()
+    var flag = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        teleporterImage.alpha = 0
+        
         picker.dataSource = self
         picker.delegate = self
-        // Do any additional setup after loading the view.
-        test()
     }
 
     func test() {
@@ -29,10 +30,14 @@ class ViewController: UIViewController {
     }
     
     @objc func updateTeleporter() {
-        if teleporterImage.alpha == 1 {
-            teleporterImage.alpha = 0
+        if flag {
+            if teleporterImage.alpha == 1 {
+                teleporterImage.alpha = 0
+            } else {
+                teleporterImage.alpha = 1
+            }
         } else {
-            teleporterImage.alpha = 1
+            timer.invalidate()
         }
     }
 
@@ -81,6 +86,15 @@ extension ViewController: UIPickerViewDelegate {
         let wordSelected = Codes.word[pickerView.selectedRow(inComponent: 2)]
         let letterSelected = Codes.letter[pickerView.selectedRow(inComponent: 3)]
         
-        print("\(pageSelected) \(paragraphSelected) \(wordSelected) \(letterSelected)")
+        let x = "\(pageSelected) \(paragraphSelected) \(wordSelected) \(letterSelected)"
+        
+        if let safeName = Codes.answers[x] {
+            flag = true
+            test()
+            letterImage.image = UIImage(named: safeName)!
+        } else {
+            flag = false
+            letterImage.image = UIImage(named: "questionMark")!
+        }
     }
 }
