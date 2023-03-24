@@ -28,26 +28,14 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="platform" translatesAutoresizingMaskIntoConstraints="NO" id="JiW-0u-5R2" userLabel="Platform">
                                         <rect key="frame" x="0.0" y="287" width="414" height="143.5"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="mtN-T6-npY">
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adE-gJ-jO4" userLabel="Page">
                                         <rect key="frame" x="0.0" y="430.5" width="414" height="387.5"/>
-                                        <subviews>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adE-gJ-jO4" userLabel="Page">
-                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="387.5"/>
-                                            </pickerView>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hq5-ja-hTA" userLabel="Paragraph">
-                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="216"/>
-                                            </pickerView>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35q-Sf-H7m" userLabel="Word">
-                                                <rect key="frame" x="207" y="0.0" width="103.5" height="216"/>
-                                            </pickerView>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQl-iz-mg1">
-                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="216"/>
-                                            </pickerView>
-                                        </subviews>
-                                    </stackView>
+                                    </pickerView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="adE-gJ-jO4" secondAttribute="trailing" id="AM5-l5-jGt"/>
                                     <constraint firstItem="JiW-0u-5R2" firstAttribute="centerX" secondItem="Sxx-Lg-BKu" secondAttribute="centerX" id="Ytf-Gf-y4J"/>
+                                    <constraint firstItem="adE-gJ-jO4" firstAttribute="leading" secondItem="Sxx-Lg-BKu" secondAttribute="leading" id="aoQ-Ux-xaa"/>
                                     <constraint firstItem="PZo-tm-IKh" firstAttribute="centerX" secondItem="Sxx-Lg-BKu" secondAttribute="centerX" id="c7x-Ec-feY"/>
                                     <constraint firstItem="ZuR-zE-wNg" firstAttribute="centerX" secondItem="Sxx-Lg-BKu" secondAttribute="centerX" id="l6X-xH-5Ja"/>
                                 </constraints>
@@ -62,6 +50,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sxx-Lg-BKu" secondAttribute="bottom" id="bee-YL-5aP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="letterImage" destination="ZuR-zE-wNg" id="2TL-v7-qXL"/>
+                        <outlet property="picker" destination="adE-gJ-jO4" id="kcR-lV-Jpa"/>
+                        <outlet property="teleporterImage" destination="PZo-tm-IKh" id="WmB-vP-wZj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
