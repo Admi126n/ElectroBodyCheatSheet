@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="YJn-Y7-axS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Sxx-Lg-BKu">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
@@ -28,7 +31,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="platform" translatesAutoresizingMaskIntoConstraints="NO" id="JiW-0u-5R2" userLabel="Platform">
                                         <rect key="frame" x="0.0" y="287" width="414" height="143.5"/>
                                     </imageView>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adE-gJ-jO4" userLabel="Page">
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adE-gJ-jO4" userLabel="CodePicker">
                                         <rect key="frame" x="0.0" y="430.5" width="414" height="387.5"/>
                                     </pickerView>
                                 </subviews>
@@ -46,8 +49,12 @@
                         <constraints>
                             <constraint firstItem="Sxx-Lg-BKu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1o1-Hw-4rU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sxx-Lg-BKu" secondAttribute="trailing" id="7Zr-r1-Iab"/>
+                            <constraint firstItem="YJn-Y7-axS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8ax-CX-bsT"/>
+                            <constraint firstAttribute="trailing" secondItem="YJn-Y7-axS" secondAttribute="trailing" id="Lp3-6t-6ml"/>
+                            <constraint firstItem="YJn-Y7-axS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UrI-eo-4ra"/>
                             <constraint firstItem="Sxx-Lg-BKu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WZe-OP-9SM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sxx-Lg-BKu" secondAttribute="bottom" id="bee-YL-5aP"/>
+                            <constraint firstAttribute="bottom" secondItem="YJn-Y7-axS" secondAttribute="bottom" id="sFR-oP-4vh"/>
                         </constraints>
                     </view>
                     <connections>
@@ -62,6 +69,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="320" height="640"/>
         <image name="platform" width="160" height="80"/>
         <image name="questionMark" width="80" height="80"/>
         <image name="teleporter" width="80" height="80"/>

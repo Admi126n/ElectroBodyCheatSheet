@@ -14,10 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var picker: UIPickerView!
     
     var timer = Timer()
-    var flag = false
+    var animationFlag: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.window?.overrideUserInterfaceStyle = .dark
         
         teleporterImage.alpha = 0
         
@@ -25,12 +27,12 @@ class ViewController: UIViewController {
         picker.delegate = self
     }
 
-    func test() {
+    func teleporterAnimation() {
         timer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(updateTeleporter), userInfo: nil, repeats: true)
     }
     
     @objc func updateTeleporter() {
-        if flag {
+        if animationFlag {
             if teleporterImage.alpha == 1 {
                 teleporterImage.alpha = 0
             } else {
@@ -38,6 +40,7 @@ class ViewController: UIViewController {
             }
         } else {
             timer.invalidate()
+            teleporterImage.alpha = 0
         }
     }
 
@@ -65,7 +68,7 @@ extension ViewController: UIPickerViewDataSource {
 }
 
 //MARK: - UIPickerViewDelegate
-
+//TODO: use images instead of letters inside pickerView
 extension ViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch component {
@@ -86,14 +89,14 @@ extension ViewController: UIPickerViewDelegate {
         let wordSelected = Codes.word[pickerView.selectedRow(inComponent: 2)]
         let letterSelected = Codes.letter[pickerView.selectedRow(inComponent: 3)]
         
-        let x = "\(pageSelected) \(paragraphSelected) \(wordSelected) \(letterSelected)"
+        let codeSelected = "\(pageSelected) \(paragraphSelected) \(wordSelected) \(letterSelected)"
         
-        if let safeName = Codes.answers[x] {
-            flag = true
-            test()
-            letterImage.image = UIImage(named: safeName)!
+        if let safeImageName = Codes.answers[codeSelected] {
+            animationFlag = true
+            teleporterAnimation()
+            letterImage.image = UIImage(named: safeImageName)!
         } else {
-            flag = false
+            animationFlag = false
             letterImage.image = UIImage(named: "questionMark")!
         }
     }

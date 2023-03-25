@@ -39,6 +39,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		660352C029CEF246002151BF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				66E3BC2229CE411900988B9D /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		660352C129CEF251002151BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				66E3BC3429CE466400988B9D /* Codes.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		660352C229CEF266002151BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				66E3BC2429CE411A00988B9D /* Main.storyboard */,
+				66E3BC2929CE411E00988B9D /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		66E3BC1229CE411900988B9D = {
 			isa = PBXGroup;
 			children = (
@@ -60,12 +85,11 @@
 			children = (
 				66E3BC1E29CE411900988B9D /* AppDelegate.swift */,
 				66E3BC2029CE411900988B9D /* SceneDelegate.swift */,
-				66E3BC2229CE411900988B9D /* ViewController.swift */,
-				66E3BC2429CE411A00988B9D /* Main.storyboard */,
-				66E3BC2929CE411E00988B9D /* LaunchScreen.storyboard */,
+				660352C129CEF251002151BF /* Models */,
+				660352C229CEF266002151BF /* Views */,
+				660352C029CEF246002151BF /* Controllers */,
 				66E3BC2C29CE411E00988B9D /* Info.plist */,
 				66E3BC3229CE437500988B9D /* Assets.xcassets */,
-				66E3BC3429CE466400988B9D /* Codes.swift */,
 			);
 			path = ElectroBodyCheatSheet;
 			sourceTree = "<group>";
@@ -309,7 +333,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -336,7 +360,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
