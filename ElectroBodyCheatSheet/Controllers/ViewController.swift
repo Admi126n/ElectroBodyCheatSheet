@@ -19,8 +19,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.window?.overrideUserInterfaceStyle = .dark
-        
         teleporterImage.alpha = 0
         
         picker.dataSource = self
