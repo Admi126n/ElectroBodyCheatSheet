@@ -116,6 +116,7 @@ extension ViewController: UIPickerViewDelegate {
             letterImage.image = UIImage(named: safeImageName)!
         } else {
             animationFlag = false
+            teleporterImage.alpha = 0
             letterImage.image = UIImage(named: "questionMark")!
         }
     }
