@@ -70,7 +70,7 @@ extension ViewController: UIPickerViewDataSource {
 extension ViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let myView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        let myImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
+        let myImageView = UIImageView(frame: CGRect(x: 0, y: 8, width: 50, height: 30))
         
         switch component {
         case 0:
@@ -86,19 +86,6 @@ extension ViewController: UIPickerViewDelegate {
         myView.addSubview(myImageView)
         
         return myView
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        switch component {
-        case 0:
-            return "\(Codes.page[row])"
-        case 1:
-            return "\(Codes.paragraph[row])"
-        case 2:
-            return "\(Codes.word[row])"
-        default:
-            return "\(Codes.letter[row])"
-        }
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
