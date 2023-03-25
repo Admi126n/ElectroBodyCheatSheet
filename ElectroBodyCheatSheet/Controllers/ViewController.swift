@@ -111,6 +111,7 @@ extension ViewController: UIPickerViewDelegate {
         
         let codeSelected = "\(pageSelected) \(paragraphSelected) \(wordSelected) \(letterSelected)"
         
+        timer.invalidate()
         if let safeImageName = Codes.answers[codeSelected] {
             animationFlag = true
             teleporterAnimation()
