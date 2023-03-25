@@ -68,8 +68,28 @@ extension ViewController: UIPickerViewDataSource {
 }
 
 //MARK: - UIPickerViewDelegate
-//TODO: use images instead of letters inside pickerView
+
 extension ViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let myView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        let myImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
+        
+        switch component {
+        case 0:
+            myImageView.image = UIImage(named: "\(Codes.page[row])")
+        case 1:
+            myImageView.image = UIImage(named: "\(Codes.paragraph[row])")
+        case 2:
+            myImageView.image = UIImage(named: "\(Codes.word[row])")
+        default:
+            myImageView.image = UIImage(named: "\(Codes.letter[row])")
+        }
+        
+        myView.addSubview(myImageView)
+        
+        return myView
+    }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch component {
         case 0:
