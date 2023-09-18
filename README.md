@@ -4,7 +4,7 @@ With this app you don't have to worry about original instruction when you are pl
 ### Screenshots
 |Good numbers and answer|Wrong numbers without answer|
 |:-------------:|:-------------:|
-| <img src=https://github.com/Admi126n/ElectroBodyCheatSheet/blob/main/Documentation/goodCode.png width=270 height=585 />|<img src=https://github.com/Admi126n/ElectroBodyCheatSheet/blob/main/Documentation/wrongCode.png width=270 height=585 />|
+| <img src=Documentation/goodCode.png width=70% height=auto />|<img src=Documentation/wrongCode.png width=70% height=auto />|
 
 ### About game
 [English wikipedia](https://en.wikipedia.org/wiki/Electro_Man)
@@ -15,7 +15,7 @@ Z tą aplikacją nie musisz martwić się o oryginalną instrukcję kiedy grasz 
 ### Zrzuty ekranu
 |Poprawne numery i odpowiedź|Niepoprawne numery bez odpowiedzi|
 |:-------------:|:-------------:|
-| <img src=https://github.com/Admi126n/ElectroBodyCheatSheet/blob/main/Documentation/goodCode.png width=270 height=585 />|<img src=https://github.com/Admi126n/ElectroBodyCheatSheet/blob/main/Documentation/wrongCode.png width=270 height=585 />|
+| <img src=Documentation/goodCode.png width=70% height=auto />|<img src=Documentation/wrongCode.png width=70% height=auto />|
 
 ### O grze
 [Polska wikipedia](https://pl.wikipedia.org/wiki/Electro_Body)
